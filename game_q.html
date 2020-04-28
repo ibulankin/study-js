@@ -27,12 +27,12 @@ h3, p{text-align:center;}
     if (userAnswer == answerR1){
         /*alert("Поздравляем, вы угадали!");*/
 //new alert start
-        $.alert({
+        function(){$.alert({
             icon:'fa fa-warning',
             title:'Поздравляем!',
             animation:'bottom',
             content:'Вы отгадали загадку, так держать.'
-            })
+            })}
 //new alert end
         count++;
     }
@@ -65,15 +65,6 @@ h3, p{text-align:center;}
     alert(`Вы угадали ${count} из 4 загадок!\nИгра окончена.`)
 
 </script>
-
-
-<p><a class="demo-7">Ротация</a></p>
-<script type="text/javascript">
-$('.demo-7').on('click',function(){$.alert({
-title:'Attention!',
-animation:'rotate',
-content:'Alert System message with propisaniem links, images and videos.'
-});});</script>
 
 </body>
 </html>
