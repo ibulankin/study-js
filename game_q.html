@@ -17,15 +17,6 @@ h3, p{text-align:center;}
 <body>
 <script type="text/javascript">
 
-//new alert start
-        function NewAlert(){$.alert({
-            icon:'fa fa-warning',
-            title:'Поздравляем!',
-            animation:'bottom',
-            content:'Вы отгадали загадку, так держать.'
-            });};
-//new alert end
-
     var answerR1 = "снег";
     var answerR2 = "мышь";
     var answerR3 = "свинья";
@@ -36,7 +27,12 @@ h3, p{text-align:center;}
     var userAnswer = prompt("Ответ: ").toLowerCase();
     if (userAnswer == answerR1){
         /*alert("Поздравляем, вы угадали!");*/
-        NewAlert();
+        $.alert({
+            icon:'fa fa-warning',
+            title:'Поздравляем!',
+            animation:'bottom',
+            content:'Вы отгадали загадку, так держать.'
+            });
 
         count++;
     }
