@@ -1,7 +1,7 @@
 'use strict';
-if (typeof jQuery === 'undefined') {
+/*if (typeof jQuery === 'undefined') {
     throw new Error('jquery-confirm requires jQuery');
-}
+}*/
 var jconfirm;
 (function ($) {
     $.confirm = function (options) {
