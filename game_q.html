@@ -5,6 +5,7 @@
 <title>Игра загадки</title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <link href="https://ibulankin.github.io/study-js/alert/jquery-confirm.css" rel="stylesheet" type="text/css">
 <script src="https://ibulankin.github.io/study-js/alert/jquery-confirm.js"></script>
@@ -16,6 +17,15 @@ h3, p{text-align:center;}
 <body>
 <script type="text/javascript">
 
+    //new alert start
+        function(NewAlert){$.alert({
+            icon:'fa fa-warning',
+            title:'Поздравляем!',
+            animation:'bottom',
+            content:'Вы отгадали загадку, так держать.'
+            })};
+//new alert end
+
     var answerR1 = "снег";
     var answerR2 = "мышь";
     var answerR3 = "свинья";
@@ -26,14 +36,8 @@ h3, p{text-align:center;}
     var userAnswer = prompt("Ответ: ").toLowerCase();
     if (userAnswer == answerR1){
         /*alert("Поздравляем, вы угадали!");*/
-//new alert start
-        function(){$.alert({
-            icon:'fa fa-warning',
-            title:'Поздравляем!',
-            animation:'bottom',
-            content:'Вы отгадали загадку, так держать.'
-            })}
-//new alert end
+        NewAlert();
+
         count++;
     }
     else alert("Ты идиот!");    
