@@ -5,8 +5,9 @@
 <title>Игра загадки</title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link href="jquery-confirm.css" rel="stylesheet" type="text/css">
-<script src="jquery-confirm.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<link href="https://ibulankin.github.io/study-js/alert/jquery-confirm.css" rel="stylesheet" type="text/css">
+<script src="https://ibulankin.github.io/study-js/alert/jquery-confirm.js"></script>
 <style>
 h3, p{text-align:center;}
 </style>
@@ -24,7 +25,15 @@ h3, p{text-align:center;}
     alert("Загадка #1:\n\n\"Бел, да не сахар,\n Ног нет, а идет.\"\n\nЧто это?");
     var userAnswer = prompt("Ответ: ").toLowerCase();
     if (userAnswer == answerR1){
-        alert("Поздравляем, вы угадали!");
+        /*alert("Поздравляем, вы угадали!");*/
+//new alert start
+        $.alert({
+            icon:'fa fa-warning',
+            title:'Поздравляем!',
+            animation:'bottom',
+            content:'Вы отгадали загадку, так держать.'
+            })
+//new alert end
         count++;
     }
     else alert("Ты идиот!");    
