@@ -1,29 +1,5 @@
-<!doctype html>
-<html>
-<head>
 <meta charset="utf-8">
-<title>Игра загадки</title>
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-<link href="https://ibulankin.github.io/study-js/alert/jquery-confirm.css" rel="stylesheet" type="text/css">
-<script src="https://ibulankin.github.io/study-js/alert/jquery-confirm.js"></script>
-<style>
-h3, p{text-align:center;}
-</style>
-</head>
-
-<body>
 <script type="text/javascript">
-
-    function MyAlert() {
-        $.alert({
-            title:'Поздравляем!',
-            animation:'rotate',
-            content:'Вы отгадали загадку, так держать.'
-        });
-    }
 
     var answerR1 = "снег";
     var answerR2 = "мышь";
@@ -31,23 +7,21 @@ h3, p{text-align:center;}
     var answerR4 = "заяц";
     var count = 0;
 
-
     alert("Загадка #1:\n\n\"Бел, да не сахар,\n Ног нет, а идет.\"\n\nЧто это?");
     var userAnswer = prompt("Ответ: ").toLowerCase();
     if (userAnswer == answerR1){
-        /*alert("Поздравляем, вы угадали!");*/
-        MyAlert();
+        alert("Поздравляем, вы угадали!");
         count++;
     }
-    else alert("Ты идиот!");    
-/*
+    else alert("Нет, ищи ответ");    
+
     alert("Загадка #2:\n\n\"Живет в норке, грызет корки.\nКороткие ножки; боится кошки.\"\n\nКто это?");
     var userAnswer = prompt("Ответ: ").toLowerCase();
     if (userAnswer == answerR2 || userAnswer == "мышка") {
         alert("Поздравляем, вы угадали!");
         count++;
     }
-    else alert("Ты идиот!");
+    else alert("Нет, ищи ответ");
 
     alert("Загадка #3:\n\n\"Пятак есть, а ничего не купит.\"\n\nКто это?");
     var userAnswer = prompt("Ответ: ").toLowerCase();
@@ -55,7 +29,7 @@ h3, p{text-align:center;}
         alert("Поздравляем, вы угадали!");
         count++;
     }
-    else alert("Ты идиот!");
+    else alert("Нет, ищи ответ");
 
     alert("Загадка #4:\n\n\"На гору бегом, с горы кувырком.\"\n\nКто это?");
     var userAnswer = prompt("Ответ: ").toLowerCase();
@@ -63,11 +37,8 @@ h3, p{text-align:center;}
         alert("Поздравляем, вы угадали!");
         count++;
     }
-    else alert("Ты идиот!");
+    else alert("Нет, ищи ответ");
 
     alert(`Вы угадали ${count} из 4 загадок!\nИгра окончена.`)
-*/
-</script>
 
-</body>
-</html>
+</script>
