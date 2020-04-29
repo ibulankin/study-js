@@ -17,27 +17,30 @@ h3, p{text-align:center;}
 <body>
 <script type="text/javascript">
 
+    function MyAlert() {
+        $.alert({
+            title:'Поздравляем!',
+            animation:'rotate',
+            content:'Вы отгадали загадку, так держать.'
+        });
+    }
+
     var answerR1 = "снег";
     var answerR2 = "мышь";
     var answerR3 = "свинья";
     var answerR4 = "заяц";
     var count = 0;
 
+
     alert("Загадка #1:\n\n\"Бел, да не сахар,\n Ног нет, а идет.\"\n\nЧто это?");
     var userAnswer = prompt("Ответ: ").toLowerCase();
     if (userAnswer == answerR1){
         /*alert("Поздравляем, вы угадали!");*/
-        $.alert({
-            icon:'fa fa-warning',
-            title:'Поздравляем!',
-            animation:'bottom',
-            content:'Вы отгадали загадку, так держать.'
-            });
-
+        MyAlert();
         count++;
     }
     else alert("Ты идиот!");    
-
+/*
     alert("Загадка #2:\n\n\"Живет в норке, грызет корки.\nКороткие ножки; боится кошки.\"\n\nКто это?");
     var userAnswer = prompt("Ответ: ").toLowerCase();
     if (userAnswer == answerR2 || userAnswer == "мышка") {
@@ -63,7 +66,7 @@ h3, p{text-align:center;}
     else alert("Ты идиот!");
 
     alert(`Вы угадали ${count} из 4 загадок!\nИгра окончена.`)
-
+*/
 </script>
 
 </body>
