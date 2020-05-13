@@ -1,5 +1,3 @@
-<script>
-
 //название используемых промокодов
 	var code1 = 'Код 1';
 	var code2 = 'Код 2';
@@ -78,5 +76,3 @@ setInterval(function(){
 			$('#changeText').html('Ваш код:<br/>\n' + code4);
 		} else {}
 	}, 100);
-
-</script>
